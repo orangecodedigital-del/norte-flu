@@ -84,6 +84,13 @@ function App(){
 
   function sendWhatsApp(){
     if(!cart.length) return;
+    // Lista pessoal: abre o seletor/compartilhamento do WhatsApp sem fixar destinatário.
+    window.open("https://wa.me/?text="+encodeURIComponent(message()),"_blank");
+  }
+
+  function sendDeliveryOrder(){
+    if(!cart.length || !ready) return;
+    // Entrega: direciona o pedido preenchido ao WhatsApp oficial do supermercado.
     window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(message()),"_blank");
   }
 
@@ -178,7 +185,7 @@ function App(){
         <label className="full">Ponto de referência<input value={customer.reference} onChange={e=>setCustomer({...customer,reference:e.target.value})} placeholder="Próximo a..."/></label>
         <label className="full">Observações<textarea value={customer.notes} onChange={e=>setCustomer({...customer,notes:e.target.value})} placeholder="Alguma orientação para a entrega?"/></label>
       </div>
-      <button className="whatsapp-button large" disabled={!ready} onClick={sendWhatsApp}>Enviar pedido pelo WhatsApp</button>
+      <button className="whatsapp-button large" disabled={!ready} onClick={sendDeliveryOrder}>Enviar pedido pelo WhatsApp</button>
     </aside></div>}
 
     <div className="print-sheet"><img src="/logo-norteflu.svg" alt="Norte Flu"/><h1>Lista de Compras</h1>
