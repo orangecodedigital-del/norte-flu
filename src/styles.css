@@ -63,3 +63,7 @@
 .topbar-inner .brand-logo{width:156px!important;height:76px!important;max-width:48vw;object-fit:contain!important;object-position:center!important;display:block!important;opacity:1!important;visibility:visible!important;flex:0 1 156px!important}
 @media(max-width:720px){.topbar-inner{min-height:82px;gap:8px}.topbar-inner .brand-logo{width:142px!important;height:70px!important;flex-basis:142px!important;max-width:46vw}}
 @media(max-width:360px){.topbar-inner .brand-logo{width:118px!important;height:62px!important;flex-basis:118px!important}}
+
+/* Cabeçalho: imagem oficial incorporada e dimensões mobile */
+.topbar-inner .brand-logo{display:block!important;width:140px!important;height:54px!important;max-width:46vw;flex:0 1 140px!important;object-fit:contain!important;opacity:1!important;visibility:visible!important}
+@media(max-width:360px){.topbar-inner .brand-logo{width:112px!important;height:44px!important;flex-basis:112px!important}}
