@@ -98,7 +98,7 @@ function App(){
 
   return <div className="app-shell">
     <header className="topbar"><div className="topbar-inner">
-      <img src="https://scontent.cdninstagram.com/v/t51.2885-19/443265606_972952780950106_2427098902530966390_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=104&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy45MDAuQzMifQ%3D%3D&_nc_ohc=a8TiiupGptIQ7kNvwX3I&_nc_oc=AdpwsndCm-da-Q83mv0dbnAO_vFjgWt-LbwVc-9MrTf7G7zcOGNjXxn1v4BMKyqjqXI&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_ss=7b689&oh=00_AQMKKXChXxU5wE0lHRB2q4A9DrXriUbeC3mVO4YNoayMUw&oe=6ACD67BA" alt="Supermercado Norte Flu" className="brand-logo" referrerPolicy="no-referrer" />
+      <img src="https://scontent.cdninstagram.com/v/t51.2885-19/443265606_972952780950106_2427098902530966390_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=104&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy45MDAuQzMifQ%3D%3D&_nc_ohc=a8TiiupGptIQ7kNvwKX3I&_nc_oc=AdpwsndCm-da-Q83mv0dbnAO_vFjgWt-LbwVc-9MrTf7G7zcOGNjXxn1v4BMKyqjqXI&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_ss=7b689&oh=00_AQMKKXChXxU5wE0lHRB2q4A9DrXriUbeC3mVO4YNoayMUw&oe=6ACD67BA" alt="Supermercado Norte Flu" className="brand-logo" referrerPolicy="no-referrer" />
       <button className="cart-pill" onClick={()=>setCartOpen(true)}><span className="cart-icon">🛒</span><strong>{totalItems}</strong><span>Minha lista</span></button>
     </div></header>
 
