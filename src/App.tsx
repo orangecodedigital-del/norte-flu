@@ -98,7 +98,7 @@ function App(){
 
   return <div className="app-shell">
     <header className="topbar"><div className="topbar-inner">
-      <img src="/logo-norteflu.svg?v=3" alt="Supermercado Norte Flu" className="brand-logo" />
+      <img src="/logo-norteflu.svg?v=4" alt="Supermercado Norte Flu" className="brand-logo" />
       <button className="cart-pill" onClick={()=>setCartOpen(true)}><span className="cart-icon">🛒</span><strong>{totalItems}</strong><span>Minha lista</span></button>
     </div></header>
 
@@ -188,7 +188,7 @@ function App(){
       <button className="whatsapp-button large" disabled={!ready} onClick={sendDeliveryOrder}>Enviar pedido pelo WhatsApp</button>
     </aside></div>}
 
-    <div className="print-sheet"><img src="/logo-norteflu.svg" alt="Norte Flu"/><h1>Lista de Compras</h1>
+    <div className="print-sheet"><img src="/logo-norteflu.svg?v=4" alt="Norte Flu"/><h1>Lista de Compras</h1>
       {grouped().map(group=><section key={group.category}><h2>{group.category}</h2>{group.items.map(item=><div className="print-row" key={item.id}><span>{item.quantity}x {item.name}</span><strong>{money(item.quantity*item.price)}</strong></div>)}</section>)}
       <div className="print-total"><span>Total estimado</span><strong>{money(total)}</strong></div><p>Supermercado Norte Flu · Desde 1977</p>
     </div>
