@@ -125,14 +125,21 @@ function App(){
           <button className={category==="Todos"?"category active":"category"} onClick={()=>setCategory("Todos")}>Todos</button>
           {categories.map(cat=><button key={cat} className={category===cat?"category active":"category"} onClick={()=>setCategory(cat)}>{cat}</button>)}
         </div>
-        <div className="product-grid">
-          {visible.map(product=><article className="product-card" key={product.id}>
-            <div className="product-image-wrap">{product.offer&&<span className="offer-tag">OFERTA</span>}<img src={product.image} alt={product.name}/></div>
-            <div className="product-body"><span className="product-category">{product.category}</span><h3>{product.name}</h3>
-              <div className="price-row"><div><strong>{money(product.price)}</strong><span>/{product.unit}</span></div><button className="add-button" onClick={()=>add(product)}>Adicionar</button></div>
+        {(category==="Todos"?categories:[category]).map(cat=>{
+          const groupProducts=visible.filter(product=>product.category===cat);
+          if(!groupProducts.length) return null;
+          return <section className="catalog-group" key={cat}>
+            <div className="catalog-group-heading"><h3>{cat}</h3><span>{groupProducts.length} {groupProducts.length===1?"produto":"produtos"}</span></div>
+            <div className="product-grid">
+              {groupProducts.map(product=><article className="product-card" key={product.id}>
+                <div className="product-image-wrap">{product.offer&&<span className="offer-tag">OFERTA</span>}<img src={product.image} alt={product.name}/></div>
+                <div className="product-body"><span className="product-category">{product.category}</span><h3>{product.name}</h3>
+                  <div className="price-row"><div className="product-price"><strong>{money(product.price)}</strong><span>/{product.unit}</span></div><button className="add-button" onClick={()=>add(product)}>Adicionar</button></div>
+                </div>
+              </article>)}
             </div>
-          </article>)}
-        </div>
+          </section>;
+        })}
       </section>
 
       <section className="how-section">
