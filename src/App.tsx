@@ -98,7 +98,7 @@ function App(){
 
   return <div className="app-shell">
     <header className="topbar"><div className="topbar-inner">
-      <img src="/logo-norteflu.svg" alt="Supermercado Norte Flu" className="brand-logo" />
+      <img src="/logo-norteflu.svg?v=3" alt="Supermercado Norte Flu" className="brand-logo" />
       <button className="cart-pill" onClick={()=>setCartOpen(true)}><span className="cart-icon">🛒</span><strong>{totalItems}</strong><span>Minha lista</span></button>
     </div></header>
 
