@@ -99,14 +99,22 @@ function App(){
       <section className="hero">
         <div className="hero-copy">
           <span className="eyebrow">DESDE 1977</span>
-          <h1>Sua compra do jeito Norte Flu.</h1>
-          <p>Escolha os produtos, monte sua lista e envie seu pedido pelo WhatsApp. Tudo organizado por categoria.</p>
+          <h1>HOJE COMEÇA<br/><span>NOSSA FESTA!</span></h1>
+          <p>49 anos levando atendimento, variedade e ofertas para a nossa região. Monte sua compra pelo celular e mande tudo organizado para o WhatsApp.</p>
           <div className="hero-actions">
             <button className="primary-button" onClick={()=>document.getElementById("catalogo")?.scrollIntoView({behavior:"smooth"})}>Começar minha compra</button>
             <button className="secondary-button" onClick={()=>setCategory("Mercearia")}>Ver ofertas</button>
           </div>
         </div>
-        <div className="hero-badge"><span>49</span><small>ANOS</small><b>NORTE FLU</b></div>
+        <div className="anniversary-art" aria-label="49 anos Norte Flu">
+    <span className="balloon balloon-red one"></span>
+    <span className="balloon balloon-blue two"></span>
+    <span className="balloon balloon-red three"></span>
+    <span className="balloon balloon-blue four"></span>
+    <div className="anniversary-number">49</div>
+    <div className="anniversary-years">ANOS</div>
+    <div className="anniversary-line">DESDE 1977</div>
+  </div>
       </section>
 
       <section className="promo-strip"><div><strong>OFERTAS ESPECIAIS</strong><span>Enquanto durarem os estoques</span></div><div className="promo-price">PREÇO DE MERCADO. JEITO DE NORTE FLU.</div></section>
