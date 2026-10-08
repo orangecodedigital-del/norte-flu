@@ -53,3 +53,7 @@
  .price-row strong{font-size:21px}
  .add-button{font-size:12px}
 }
+/* Logo oficial: recorte da área útil do arquivo original para o cabeçalho */
+.topbar-inner .brand-logo{display:block;width:164px;height:64px;flex:0 0 164px;object-fit:contain;object-position:left center;background:transparent}
+@media(max-width:720px){.topbar-inner .brand-logo{width:142px;height:58px;flex-basis:142px}}
+@media(max-width:360px){.topbar-inner .brand-logo{width:120px;height:52px;flex-basis:120px}}
